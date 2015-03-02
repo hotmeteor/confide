@@ -181,7 +181,7 @@ class EloquentPasswordService implements PasswordServiceInterface
             function ($message) use ($user, $token, $subject) {
                 $message
                     ->to($user->email, $user->username)
-                    ->subject(subject);
+                    ->subject($subject);
             }
         );
     }
